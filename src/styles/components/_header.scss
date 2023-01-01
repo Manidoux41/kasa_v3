@@ -1,8 +1,11 @@
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    margin-bottom: 63px;
     .logo {
-        padding: 24px;
+        padding: 0;
     }
     nav {
         ul {
@@ -10,9 +13,16 @@ header {
             display: flex;
             justify-content: space-between;
             li {
-                padding: 24px;
+                padding:0px;
                 a {
                     text-decoration: none;
+                    font-size: 24px;
+                    font-weight: 500;
+                    color: #FF6060;
+                    padding: 0 23px;
+                }
+                .active{
+                    text-decoration: underline;
                 }
             }
         }
