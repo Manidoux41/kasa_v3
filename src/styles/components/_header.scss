@@ -1,0 +1,20 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    .logo {
+        padding: 24px;
+    }
+    nav {
+        ul {
+            list-style: none;           
+            display: flex;
+            justify-content: space-between;
+            li {
+                padding: 24px;
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
