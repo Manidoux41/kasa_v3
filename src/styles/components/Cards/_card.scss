@@ -1,0 +1,12 @@
+@use '../../abstracts/' as *;
+
+.card {
+    width: 340px;
+    height: 340px;
+    background: #FF6060;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

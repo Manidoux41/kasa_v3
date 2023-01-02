@@ -5,4 +5,8 @@
     border-radius: 25px;
     margin: 43px 0;
     padding: 56px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 60px;
 }

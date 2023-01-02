@@ -1,9 +1,15 @@
 import React from 'react'
+import Card from './Card'
 
-const Cards = (props) => {
+const Cards = () => {
   return (
     <div className='cards'>
-        {props.children}
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
     </div>
   )
 }
