@@ -1,9 +1,17 @@
 import React from 'react'
+import Appartements from '../../datas/appartement.json';
 
 const Card = () => {
+
   return (
     <div className='card'>
-        <h3>Card</h3>
+        {
+          Appartements.map(appartement => {
+            return(
+              <h3>{appartement.title}</h3>
+            )
+          })
+        }
     </div>
   )
 }
