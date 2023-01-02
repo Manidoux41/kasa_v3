@@ -1,17 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Appartements from '../../datas/appartement.json';
 
 const Card = () => {
 
+  const [appartement, setAppartement] = useState();
+
+  useEffect(() => {
+    fetch(Appartements)
+      .then((res) => setAppartement(res.data))
+  }, [])
+
   return (
-    <div className='card'>
-        {
-          Appartements.map(appartement => {
-            return(
-              <h3>{appartement.title}</h3>
-            )
-          })
-        }
+    <div className='card'>        
+              <h3>Appartement</h3>            
     </div>
   )
 }
