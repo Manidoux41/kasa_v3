@@ -1,3 +1,5 @@
+@use '../../abstracts/' as *;
+
 header {
     display: flex;
     justify-content: space-between;
@@ -26,7 +28,7 @@ header {
                     text-decoration: none;
                     font-size: 24px;
                     font-weight: 500;
-                    color: #FF6060;
+                    color: $mainColor;
                     padding: 0 23px;
                     @media screen and (max-width:768px) {
                         font-size: 12px;
