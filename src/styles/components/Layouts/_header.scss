@@ -4,9 +4,17 @@ header {
     align-items: center;
     padding-top: 40px;
     margin-bottom: 63px;
+    
     .logo {
         padding: 0;
+        img{
+            @media screen and (max-width:768px) {        
+                max-width: 145px;
+                max-height: 47px;
+            }   
+        }             
     }
+    
     nav {
         ul {
             list-style: none;           
@@ -20,6 +28,9 @@ header {
                     font-weight: 500;
                     color: #FF6060;
                     padding: 0 23px;
+                    @media screen and (max-width:768px) {
+                        font-size: 12px;
+                    }
                 }
                 .active{
                     text-decoration: underline;
