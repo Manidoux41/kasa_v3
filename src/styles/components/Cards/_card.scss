@@ -8,5 +8,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    position: relative;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    h3 {
+        position: absolute;
+        text-align: center;
+        bottom: 15px;
+        color: #FFF;
+    }
 }
