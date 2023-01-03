@@ -6,12 +6,7 @@ const Home = () => {
   return (
     <div className='wrapper home'>
       <Banner />
-      <Cards>
-        <h2>Cards</h2>
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-      <p>test</p>
-      </Cards>
-      
+      <Cards />      
     </div>
     
   )
