@@ -1,18 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import Appartements from '../../datas/appartement.json';
+import React  from 'react'
 
-const Card = () => {
-
-  const [appartement, setAppartement] = useState();
-
-  useEffect(() => {
-    fetch(Appartements)
-      .then((res) => setAppartement(res.data))
-  }, [])
+const Card = (props) => {
 
   return (
     <div className='card'>        
-              <h3>Appartement</h3>            
+        <h3>{props.title}</h3>
     </div>
   )
 }

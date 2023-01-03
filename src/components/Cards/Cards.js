@@ -1,17 +1,15 @@
 import React from 'react'
 import Card from './Card'
-import Appartements from '../../datas/appartement.json';
+import data from '../../datas/appartement.json';
 
 
 const Cards = () => {
+  
   return (
     <div className='cards'>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {data.map(item => (
+        <Card key={item.id} title={item.title} cover={item.cover} description={item.description} />
+      ))}
     </div>
   )
 }
