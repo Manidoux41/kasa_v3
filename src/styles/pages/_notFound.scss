@@ -1,0 +1,23 @@
+@use '../abstracts/' as *;
+
+.notFound {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: #FF6060;
+    margin: 160px 0 100px;
+    gap: 66px;
+    h1 {
+        font-size: 18rem;
+        font-weight: 700;
+    }
+    p {
+        font-size: 36px;
+        font-weight: 500;
+    }
+    a {
+        color: #FF6060;
+        font-size: 18px;
+    }
+}
