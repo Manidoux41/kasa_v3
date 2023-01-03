@@ -3,8 +3,7 @@ import Card from './Card'
 import data from '../../datas/appartement.json';
 
 
-const Cards = () => {
-  
+const Cards = () => {  
   return (
     <div className='cards'>
         {data.map(item => (

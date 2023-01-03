@@ -30,12 +30,13 @@ header {
                     padding: 0 23px;
                     @media screen and (max-width:768px) {
                         font-size: 12px;
-                    }
+                    }                   
                 }
-                .active{
-                    text-decoration: underline;
-                }
+                
             }
         }
+    }
+    .active a{
+        text-decoration: underline;
     }
 }

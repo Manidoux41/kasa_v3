@@ -1,7 +1,17 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import logo from '../../assets/svg/logo.svg';
 const Header = () => {
+
+      //assigning location variable
+      const location = useLocation();
+
+      //destructuring pathname from location
+      const { pathname } = location;
+  
+      //Javascript split method to get the name of the path in array
+      const splitLocation = pathname.split("/");
+
   return (
     <header className='wrapper'>
         <NavLink to="/" className="logo">
@@ -9,11 +19,11 @@ const Header = () => {
         </NavLink>
         <nav>
             <ul>
-                <li>
-                    <Link to="/home">Accueil</Link>
+                <li className={splitLocation[1] === "home"  || splitLocation[1] === "" ? "active" : ""}>
+                    <Link to="/home" >Accueil</Link>
                 </li>
-                <li>
-                    <Link to="/about">A Propos</Link>
+                <li className={splitLocation[1] === "about" ? "active" : ""}>
+                    <Link to="/about" >A Propos</Link>
                 </li>                
             </ul>
         </nav>
