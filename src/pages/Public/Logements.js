@@ -6,7 +6,6 @@ const Logements = () => {
   const { id } = useParams();
 
   // Use the id value to retrieve the logement detail from the json data
-  const logement = jsonData.find((l) => l.id === id);
 
 
   return (

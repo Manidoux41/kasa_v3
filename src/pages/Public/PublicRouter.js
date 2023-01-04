@@ -11,7 +11,7 @@ const PublicRouter = () => {
 
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/logements/:id" element={<Logements data={data}/>} />
+            <Route path="/logements/:id" element={<Logements/>} />
             
             <Route path="*" element={<NotFound />} />
           </Route>
