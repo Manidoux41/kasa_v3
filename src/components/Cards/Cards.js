@@ -7,8 +7,8 @@ const Cards = () => {
 
   return (
     <div className='cards'>
-        {data.map((appart, index) => (
-        <Card key={index} appart={appart} />
+        {data.map((appart) => (
+        <Card key={appart.id} appart={appart} />
       ))}
     </div>
   )
