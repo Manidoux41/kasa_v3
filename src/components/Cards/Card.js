@@ -1,12 +1,15 @@
 import React  from 'react'
+import { Link } from 'react-router-dom'
 
 const Card = ({appart}) => {
 
   return (
-    <div className='card'>  
+    
+      <Link className='card' to={'../logements/'+appart.id} key={appart.id}>  
         <img src={appart.cover} alt={appart.description} />      
-        <h3>{appart.title}</h3>        
-    </div>
+        <h3>{appart.title}</h3> 
+      </Link>       
+    
   )
 }
 

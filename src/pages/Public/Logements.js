@@ -1,21 +1,20 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import data from "../../datas/appartement.json";
+
 
 const Logements = () => {
   
-  const { id } = useParams();
-
-  // Use the id value to retrieve the logement detail from the json data
-
+  const { logementId } = useParams();
+  const appart = data.find((appart) => appart.id === logementId);
+  const {title, location} = appart;
 
   return (
-    <div className='wrapper logements'>
-      <h2>Logements</h2>
-      <br />
-      {}    
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-      <p>test</p>
-    </div>
+    <>
+      <h1>{title}</h1>
+      <p>{location}</p>
+    </>
+    
   )
 }
 
