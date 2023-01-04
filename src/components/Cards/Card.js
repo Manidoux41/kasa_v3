@@ -1,11 +1,11 @@
 import React  from 'react'
 
-const Card = (props) => {
+const Card = ({appart}) => {
 
   return (
     <div className='card'>  
-        <img src={props.cover} alt={props.description} />      
-        <h3>{props.title}</h3>
+        <img src={appart.cover} alt={appart.description} />      
+        <h3>{appart.title}</h3>
     </div>
   )
 }
