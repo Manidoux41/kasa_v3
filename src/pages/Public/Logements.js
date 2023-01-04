@@ -14,7 +14,10 @@ const Logements = () => {
     <div className="wrapper logements">
     <h1>{title}</h1>
       <p>{location}</p>
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br />
     </div>
       
     
