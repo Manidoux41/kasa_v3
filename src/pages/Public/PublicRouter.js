@@ -1,7 +1,6 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import {Layout, Home, About, Logements, NotFound} from '../../pages/Public'
-import data from '../../datas/appartement.json';
 
 const PublicRouter = () => {
   return (
