@@ -1,6 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import {Layout, Home, About, Logements, NotFound} from '../../pages/Public'
+import data from '../../datas/appartement.json';
 
 const PublicRouter = () => {
   return (
@@ -10,7 +11,7 @@ const PublicRouter = () => {
 
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/logements/:appartId" element={<Logements/>} />
+            <Route path="/logements/:id" element={<Logements data={data}/>} />
             
             <Route path="*" element={<NotFound />} />
           </Route>
