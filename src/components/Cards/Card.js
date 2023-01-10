@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom'
 
 const Card = ({appart}) => {
 
-  return (
-    
+  return (    
       <Link className='card' to={'../logements/'+appart.id} key={appart.id}>  
         <img src={appart.cover} alt={appart.description} />      
         <h3>{appart.title}</h3> 
-      </Link>       
+      </Link>    
     
   )
 }

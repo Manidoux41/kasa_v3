@@ -1,27 +1,79 @@
 @use '../../abstracts/' as *;
 
 .dropdown {
-    background-color: $mainColor;
-    border-radius: 10px;
-    color: #fff;
+    width: 80%;
+    margin: 43px auto;
+  }
+  .dropdown_container {
+    margin-bottom: 25px;
+  }
+  .dropdown_trigger {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .7rem 1.1rem;
-    margin: 31px 0;
-    h4 {
-        font-size: 18px;
-        font-weight: 500;
+    border-radius: 5px;
+    height: 45px;
+    background: #ff6060;
+    color: white;
+    cursor: pointer;
+    padding: 0px 13px;
+    margin: 0;
+  }
+  .dropdown_title {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 24px;
+    margin: 5px 0px;
+  }
+  .dropdown_chevron {
+    width: 13px;
+  }
+  .dropdown_chevron_rotate {
+    animation: rotate 0.5s ease forwards;
+    width: 13px;
+  }
+  .dropdown_body {
+    opacity: 0;
+    transition: max-height 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .dropdown_body_anim {
+    font-family: "Montserrat";
+    font-size: 24px;
+    font-weight: 300;
+    color: #ff6060;
+    background: #f7f7f7;
+    border-radius: 5px;
+    line-height: 34px;
+    padding: 20px;
+    pointer-events: none;
+    height: auto;
+    opacity: 1;
+    animation: max-height 0.1s ease, opacity 0.3s ease-out;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
     }
-    img {
-        height: 23px;
-        width: 15px;
-        margin-right: -2px;
-        font-weight: 700;
-        transition: all ease-in-out .4s;
-        &:hover{
-            cursor: pointer;
-        }
+    to {
+      transform: rotate(-180deg);
     }
-
-}
+  }
+  @keyframes max-height {
+    from {
+      height: 0;
+    }
+    to {
+      height: auto;
+    }
+  }
+  @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

@@ -1,16 +1,32 @@
 import React from 'react'
 import Banner from '../../components/Banner/Banner'
-import Dropdown from '../../components/Dropdown/Dropdown'
+import Collapse from '../../components/Collapse/Collapse'
+import aboutCollapse from "../../components/Collapse/collapseAbout.json";
+
 
 const About = () => {
+
+
   return (
     <div className='wrapper about'>
-      <Banner />
-      <Dropdown />
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-      <p>test</p>
+      <Banner />       
+      <section className="dropdown">
+          {aboutCollapse.map((text, idx) => {
+            return (
+              <Collapse
+                title={text.title}
+                key={idx}
+                description={text.description}
+                class="dropdown_container"
+              />
+            );
+          })}
+        </section>     
+      
     </div>
   )
 }
 
 export default About
+
+
