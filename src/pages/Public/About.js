@@ -6,7 +6,6 @@ import aboutCollapse from "../../components/Collapse/collapseAbout.json";
 
 const About = () => {
 
-
   return (
     <div className='wrapper about'>
       <Banner />       

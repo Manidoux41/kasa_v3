@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import logo from '../../assets/svg/logo.svg';
+
 const Header = () => {
 
       //assigning location variable
