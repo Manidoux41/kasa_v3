@@ -9,13 +9,13 @@
     border-radius: 25px;
     overflow: hidden;
     position: relative;
-    .slide__gallery{
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-        // position: absolute;
-        // background-size: cover;
-        // background-position: center;
+    // .slide__gallery{
+    //     width: 100%;
+    //     height: auto;
+    //     overflow: hidden;
+    //     // position: absolute;
+    //     // background-size: cover;
+    //     // background-position: center;
         img {
             max-height: 100%;
             height: 100%;
@@ -38,4 +38,3 @@
         left: 23px;
     }
     
-}
