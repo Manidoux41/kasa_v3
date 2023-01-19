@@ -1,0 +1,27 @@
+@use '../../abstracts/' as *;
+
+.slide__show {
+    width: 1240px;
+    height: 415px;
+    margin: 0auto;
+    background-color: $mainColor;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    .slide__left, .slide__right {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        &:hover {
+            color: $mainColor;
+        }
+    }
+    .slide__right {
+        right: 23px;
+    }
+    .slide__left {
+        left: 23px;
+    }
+    
+}

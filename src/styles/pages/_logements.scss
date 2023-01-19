@@ -1,4 +1,58 @@
+@use '../abstracts/' as *;
+
 .logements {
-    margin-top: 63px;
-    text-align: center;
+    margin-top: 25px;
+    .logementHeader{
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        color: $mainColor;
+        font-weight: 500;
+        font-size: 18px;
+        .logementInfo{
+            h1 {
+                font-size: 36px;                     
+            }
+            .tag{
+                display: flex;
+                list-style: none;
+                gap: 10px;
+                margin-top: 20px;
+                li{
+                    color: #fff;
+                    font-size: 18px;
+                    background-color: $mainColor;
+                    border-radius: 10px;
+                    padding: 3px 40px;
+                }
+            }
+        }
+        .proprioInfo{
+            .nameAvatar {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 10px;
+                font-size: 18px;
+                font-weight: 500;
+                .nomProprio{
+                    height: 52px;
+                    width: 93px;
+                    font-weight: 500;
+                    line-height: 30px;
+                    text-align: right;
+                }
+                .avatarProprio{
+                    width: 64px;
+                    height: 64px;
+                    background: #C4C4C4;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    
+    .proprio{
+
+    }
 }
