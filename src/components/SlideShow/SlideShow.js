@@ -3,7 +3,7 @@ import SlideLeft from "../../assets/svg/slide-left.svg";
 import SlideRight from "../../assets/svg/slide-right.svg";
 
 const SlideShow = ({ pictures }) => {
-  const [currentIndex, setCurrentIndex] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
 
   const slideStyle = {
