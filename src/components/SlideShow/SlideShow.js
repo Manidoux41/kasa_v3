@@ -36,6 +36,9 @@ const SlideShow = ({ pictures }) => {
       <div className="slide__right">
         <img src={SlideRight} alt="slide right" onClick={goToNext}/>
       </div>
+      <div className="position">
+        <p>{currentIndex + 1}/{pictures.length}</p>
+      </div>
     </div>
   );
 };
