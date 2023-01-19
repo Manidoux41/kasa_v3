@@ -21,8 +21,6 @@ const Logements = () => {
             <li>Paris 10</li>
           </ul>
         </div>
-
-
         <div className="proprioInfo">
           <div className="nameAvatar">
             <h3 className="nomProprio">Alex Dumas</h3>
@@ -33,10 +31,11 @@ const Logements = () => {
           <div className="stars">
             
           </div>
+      </div>
+      </div>
+      <div className="description">
 
-      </div>
-      </div>
-      
+      </div>      
     </div>
   );
 };
