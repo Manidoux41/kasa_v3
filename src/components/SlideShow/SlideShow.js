@@ -29,7 +29,7 @@ const SlideShow = ({ pictures }) => {
   }
 
   return (
-    <div style={slideStyle}    >
+    <div style={slideStyle}>
       <div className="slide__left">
         <img src={SlideLeft} alt="slide left" onClick={goToPrevious}/>
       </div>

@@ -2,6 +2,8 @@
 
 
     .slide__left, .slide__right {
+        height: 79px;
+        width: auto;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -9,6 +11,10 @@
         &:hover {
             color: $mainColor;
         }
+        @media screen and (max-width:768px) {
+            height: 20px;
+            width: auto;
+         }  
     }
     .slide__right {
         right: 23px;

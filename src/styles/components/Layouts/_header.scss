@@ -6,7 +6,10 @@ header {
     align-items: center;
     padding-top: 40px;
     margin-bottom: 63px;
-    
+    @media screen and (max-width:768px) {
+        width:90%;
+        margin: 0 auto;
+    }
     .logo {
         padding: 0;
         img{
