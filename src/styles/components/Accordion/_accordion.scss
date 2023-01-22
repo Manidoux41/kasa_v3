@@ -1,0 +1,27 @@
+@use '../../abstracts/' as *;
+
+.accordion {
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: $mainColor;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 18px;
+    .title {
+        font-size: 18px;
+    }
+    .chevron__down {
+       
+    }
+    .chevron__up {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        // width: 26px;
+        // height: 16px;
+        overflow: hidden;
+    }
+}

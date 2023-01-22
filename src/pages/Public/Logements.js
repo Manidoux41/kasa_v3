@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+import Accordion from "../../components/Accordion/Accordion";
 import SlideShow from "../../components/SlideShow/SlideShow";
 import data from "../../datas/appartement.json";
 
@@ -40,7 +41,10 @@ const Logements = () => {
           <div className="stars">{rating}</div>
         </div>
       </div>
-      <div className="description"></div>
+      <div className="description">
+        <Accordion>Services</Accordion>
+        <Accordion>Equipements</Accordion>
+      </div>
     </div>
   );
 };

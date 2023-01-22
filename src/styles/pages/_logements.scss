@@ -9,6 +9,7 @@
     }
     .logementHeader{
         margin-top: 30px;
+        margin-bottom: 30px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         color: $mainColor;
@@ -82,5 +83,12 @@
                 justify-self:flex-end
             }
         }
+        
+    }
+    .description {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 76px;
     }
 }
