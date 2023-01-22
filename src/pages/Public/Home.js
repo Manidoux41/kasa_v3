@@ -1,17 +1,15 @@
-import React from 'react'
-import Banner from '../../components/Banner/Banner'
-import Cards from '../../components/Cards/Cards'
-
-
+import Banner from "../../components/Banner/Banner";
+import Cards from "../../components/Cards/Cards";
 
 const Home = () => {
-  return (
-    <div className='wrapper home'>
-      <Banner />
-      <Cards />      
-    </div>
-    
-  )
-}
+  const index = 1;
 
-export default Home
+  return (
+    <div className="wrapper home">
+      <Banner imgSource={`./image${index}.jpg`} />
+      <Cards />
+    </div>
+  );
+};
+
+export default Home;

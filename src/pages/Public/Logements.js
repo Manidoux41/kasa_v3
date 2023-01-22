@@ -7,7 +7,7 @@ import data from "../../datas/appartement.json";
 const Logements = () => {
   const { logementId } = useParams();
   const appart = data.find((appart) => appart.id === logementId);
-  const { title, location, pictures, tags, host, rating } = appart;
+  const { title, location, pictures, tags, host, rating, equipments,description } = appart;
 
   const containerStyles = {
     with:"100%",
@@ -42,8 +42,8 @@ const Logements = () => {
         </div>
       </div>
       <div className="description">
-        <Accordion>Services</Accordion>
-        <Accordion>Equipements</Accordion>
+        <Accordion description={description}>Description</Accordion>
+        <Accordion equipments={equipments}>Equipements</Accordion>
       </div>
     </div>
   );
