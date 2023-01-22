@@ -9,11 +9,18 @@ const About = () => {
   
   const index = 2
 
+  const accordionInfo = [
+    {name: "Fiabilité"},
+    {name: "Respect"},
+    {name: "Service"},
+    {name: "Responsabilité"}
+  ]
+
   return (
     <div className='wrapper about'>
       <Banner imgSource={`./image${index}.jpg`}/>       
       <section className="dropdown">
-          <Accordion />
+          {<Accordion />}
         </section>     
       
     </div>

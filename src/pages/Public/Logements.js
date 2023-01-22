@@ -1,20 +1,31 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import Accordion from "../../components/Accordion/Accordion";
+import Rating from "../../components/Rating/Rating";
 import SlideShow from "../../components/SlideShow/SlideShow";
 import data from "../../datas/appartement.json";
 
-const Logements = () => {
+const Logements = ({ children }) => {
   const { logementId } = useParams();
   const appart = data.find((appart) => appart.id === logementId);
-  const { title, location, pictures, tags, host, rating, equipments,description } = appart;
+  const {
+    title,
+    location,
+    pictures,
+    tags,
+    host,
+    rating,
+    equipments,
+    description,
+  } = appart;
 
   const containerStyles = {
-    with:"100%",
+    with: "100%",
     height: "415px",
-    margin:"0 auto"
-  }
+    margin: "0 auto",
+  };
 
+  const accordionInfo = [{ name: "Description" }, { name: "Equipments" }];
 
   return (
     <div className="wrapper logements">
@@ -38,13 +49,12 @@ const Logements = () => {
               <img src={host.picture} alt="" />
             </div>
           </div>
-          <div className="stars">{rating}</div>
+          <div className="stars">
+            <Rating rate={rating} />
+          </div>
         </div>
       </div>
-      <div className="description">
-        <Accordion description={description}>Description</Accordion>
-        <Accordion equipments={equipments}>Equipements</Accordion>
-      </div>
+      <div className="description"></div>
     </div>
   );
 };
