@@ -2,30 +2,43 @@
 
 .accordion {
     width: 100%;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: space-between;
-    background-color: $mainColor;
-    color: #fff;
-    border-radius: 5px;
-    padding: 5px 18px;
-    .title {
-        font-size: 18px;
-    }
-    .chevron__down {
-       
-    }
-    .chevron__up {
+    margin: 30px auto;
+    &__header {
+        color: #fff;
+        background-color: $mainColor;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
+        padding: 15px;
+        border-radius: 8px;
         font-size: 18px;
-        // width: 26px;
-        // height: 16px;
-        overflow: hidden;
+        font-weight: 500;
+        img {
+            width: 20px;
+            height: 15px;
+        }
+        .rotate {
+            transform: rotate(-180deg);
+            transition: all 1s ease;
+        }
     }
-}
-.accordion__content {
-    height: auto;
-    color: #000
+    &__content {
+        padding: 15px;
+        background-color: #f6f6f6;
+        color: $mainColor;
+        border-radius: 8px;
+        text-align: justify;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 1.2s ease;
+    }
+    &__contentDisplay {
+        padding: 15px;
+        background-color: #f6f6f6;
+        color: $mainColor;
+        border-radius: 8px;
+        text-align: justify;
+        visibility: visible;
+        opacity: 1;
+    }
 }

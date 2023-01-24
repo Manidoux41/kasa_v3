@@ -1,7 +1,7 @@
 import React from 'react'
 import Accordion from '../../components/Accordion/Accordion'
 import Banner from '../../components/Banner/Banner';
-
+import aboutData from '../../datas/aboutData';
 
 
 const About = () => {
@@ -9,19 +9,16 @@ const About = () => {
   
   const index = 2
 
-  const accordionInfo = [
-    {name: "Fiabilité"},
-    {name: "Respect"},
-    {name: "Service"},
-    {name: "Responsabilité"}
-  ]
+  
 
   return (
     <div className='wrapper about'>
       <Banner imgSource={`./image${index}.jpg`}/>       
-      <section className="dropdown">
-          {<Accordion />}
-        </section>     
+      <div className="about__container">
+        {aboutData.map((data, index) => {
+          return <Accordion key={index} data={data} />;
+        })}
+      </div> 
       
     </div>
   )

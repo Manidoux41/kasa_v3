@@ -1,14 +1,10 @@
 .about {
   margin-top: 63px;
-  .dropdown{
-    margin-top: 33px;
-}
+  &__container{
+    width: 1103px;
+    margin: 0 auto;
+  }
 }
   /* MediaQueries */
   
-  @media all and (max-width: 812px) {
-    .dropdown {
-      margin: 64px auto;
-    }
-  }
  
