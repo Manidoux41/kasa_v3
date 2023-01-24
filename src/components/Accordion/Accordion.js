@@ -5,7 +5,6 @@ const Accordion = ({ data }) => {
   const [isActive, setIsActive] = useState(false);
 
   const displayContent = () => {
-    console.log("display");
     setIsActive(!isActive);
   };
 
