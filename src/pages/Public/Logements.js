@@ -54,7 +54,14 @@ const Logements = ({ children }) => {
           </div>
         </div>
       </div>
-      <div className="description"></div>
+      <div className="description">
+              <Accordion title="Description" content={description} />
+              <Accordion title="Equipements" content={equipments.map((equi)=> {
+                return(
+                  <li>{equi}</li>
+                )
+              })} />
+      </div> 
     </div>
   );
 };

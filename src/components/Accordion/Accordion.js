@@ -1,7 +1,7 @@
 import chevronUp from "../../assets/svg/chevron-up.svg";
 import React, { useState } from "react";
 
-const Accordion = ({ data }) => {
+const Accordion = ({ title, content }) => {
   const [isActive, setIsActive] = useState(false);
 
   const displayContent = () => {
@@ -12,7 +12,7 @@ const Accordion = ({ data }) => {
     <>
       <div className="accordion">
         <div className="accordion__header">
-          <h3>{data.title}</h3>
+          <h3>{title}</h3>
           <img
             src={chevronUp}
             alt=""
@@ -22,11 +22,11 @@ const Accordion = ({ data }) => {
         </div>
         {!isActive ? (
           <div className="accordion__contentDisplay">
-            <p>{data.content}</p>
+            <p>{content}</p>
           </div>
         ) : (
           <div className="accordion__content">
-            <p>{data.content}</p>
+            <p>{content}</p>
           </div>
         )}
       </div>
