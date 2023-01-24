@@ -21,7 +21,7 @@
             height: 15px;
         }
         .rotate {
-            transform: rotate(-180deg);
+            transform: rotate(180deg);
             transition: all 1s ease;
         }
     }
@@ -33,7 +33,7 @@
         text-align: justify;
         visibility: hidden;
         height: 0;
-        transition: all .3s ease;
+        transition: all .3s ease-in-out;
     }
     &__contentDisplay {
         padding: 15px;
@@ -42,6 +42,6 @@
         border-radius: 8px;
         text-align: justify;
         visibility: visible;
-        height: auto;   
+        height: 100%;   
     }
 }
