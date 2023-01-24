@@ -2,7 +2,7 @@
 
 .accordion {
     width: 100%;
-    margin: 30px auto;
+    margin: 25px auto;
     &__header {
         color: #fff;
         background-color: $mainColor;
@@ -22,26 +22,27 @@
         }
         .rotate {
             transform: rotate(180deg);
-            transition: all 1s ease;
+            transition: all .2s ease;
         }
     }
     &__content {
-        padding: 15px;
+        padding: 12px;
+        margin-bottom: -50px;
         background-color: #f6f6f6;
         color: $mainColor;
         border-radius: 8px;
         text-align: justify;
         visibility: hidden;
         height: 0;
-        transition: all .3s ease-in-out;
+        transition: all .1s ease;
     }
     &__contentDisplay {
-        padding: 15px;
+        padding: 12px;
         background-color: #f6f6f6;
         color: $mainColor;
         border-radius: 8px;
         text-align: justify;
         visibility: visible;
-        height: 100%;   
+        height: 80%;   
     }
 }
