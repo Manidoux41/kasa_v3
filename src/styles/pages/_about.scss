@@ -1,11 +1,15 @@
 .about {
-  margin-top: 63px;
+  margin-top: 33px;
+  @media screen and (max-width:768px) {
+    margin-top: 19px;
+  }
   &__container{
     width: 80%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 25px;
+    padding: 21px 0;
   }
 }
   /* MediaQueries */

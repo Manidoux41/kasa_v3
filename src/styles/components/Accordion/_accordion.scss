@@ -2,7 +2,11 @@
 
 .accordion {
     width: 100%;
-    margin: 25px auto;
+    margin: 12px auto;
+    @media screen and (max-width:768px) {
+        margin: 9px auto;
+
+    }
    
     &__header {
         color: #fff;
@@ -10,16 +14,24 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 15px;
+        padding: 6px 18px;
         border-radius: 8px;
-        h3 {
-            font-size: 18px;
+        font-size: 24px;
+        h3{
             font-weight: 500;
-
         }
+        @media screen and (max-width:768px) {
+            font-size: 13px;
+            padding: 5px 12px;
+        }       
         img {
-            width: 20px;
-            height: 15px;
+            width: 23px;
+            height: 14px;
+            font-weight: 500;
+            @media screen and (max-width:768px) {
+                width: 15px;
+            height: 8px;
+            }  
         }
         .rotate {
             transform: rotate(180deg);
@@ -27,27 +39,28 @@
         }
     }
     &__content {
-        padding: 12px;
-        background-color: #f6f6f6;
-        color: $mainColor;
-        border-radius: 8px;
-        text-align: justify;
         visibility: hidden;
         opacity: 0;
         height: 0;
-        transition: all .1s ease;
-        @media screen and (max-width:768px) {
-            margin-bottom: -25px;
-        }
     }
     &__contentDisplay {
-        padding: 12px;
+        padding: 36px 18px ;
+        font-size: 24px;
+        line-height: 36px;
         background-color: #f6f6f6;
         color: $mainColor;
         border-radius: 8px;
-        text-align: justify;
+        display: flex;
+        justify-content: left;
+        align-items: flex-start;
         visibility: visible;
         height: 80%;  
+        @media screen and (max-width:768px) {
+            line-height: 17px;
+            font-size: 12px;
+            padding: 17px 12px ;
+
+        }
        
     }
 }
