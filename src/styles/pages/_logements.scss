@@ -55,8 +55,13 @@
         .proprioInfo{
             display: flex;
             flex-direction: column;
+            gap: 24px;
             align-items: flex-end;
             gap: 20px;
+            @media screen and (max-width:768px) {
+                flex-direction: row-reverse;
+                justify-content: space-between;
+            }
             .nameAvatar {
                 display: flex;
                 justify-content: flex-end;
@@ -64,12 +69,20 @@
                 gap: 10px;
                 font-size: 18px;
                 font-weight: 500;
+                @media screen and (max-width:768px) {
+                    font-size: 12px;
+                }
                 .nomProprio{
                     height: 52px;
                     width: 93px;
                     font-weight: 500;
                     line-height: 30px;
                     text-align: right;
+                    @media screen and (max-width:768px) {
+                        height: 33px;
+                    width: 93px;
+                    line-height: 17px;
+                    }
                 }
                 .avatarProprio{
                     width: 64px;
@@ -77,13 +90,18 @@
                     background: #C4C4C4;
                     border-radius: 50%;
                     overflow: hidden;
+                    @media screen and (max-width:768px) {
+                        width: 32px;
+                        height: 32px;
+                    }
                 }
             }
             .stars {
+                justify-self: flex-end;
                 display : flex;
                 justify-content: space-between;
                 align-items: flex-start;
-                height : 30%; 
+                height : 100%; 
             }
         }
         

@@ -28,6 +28,9 @@
         transform: translateX(-50%);
         font-size: 18px;
         color: #fff;
+        @media screen and (max-width:768px) {
+            visibility: hidden;
+        }
     }
 
     
