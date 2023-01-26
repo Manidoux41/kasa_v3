@@ -5,9 +5,7 @@
     margin: 12px auto;
     @media screen and (max-width:768px) {
         margin: 9px auto;
-
-    }
-   
+    }   
     &__header {
         color: #fff;
         background-color: $mainColor;
@@ -60,7 +58,6 @@
             font-size: 12px;
             padding: 17px 12px ;
 
-        }
-       
+        }       
     }
 }

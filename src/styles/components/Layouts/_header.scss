@@ -7,9 +7,7 @@ header {
     padding-top: 40px;
     // margin-bottom: 63px;
     @media screen and (max-width:768px) {
-        width:90%;
-        // margin-bottom: 25px;
-       
+        width:90%;       
     }
     .logo {
         padding: 0;
@@ -33,9 +31,11 @@ header {
                     font-size: 24px;
                     font-weight: 500;
                     color: $mainColor;
-                    padding: 0 23px;
+                    padding: 0 12px;
                     @media screen and (max-width:768px) {
                         font-size: 12px;
+                        text-transform: uppercase;
+                        padding: 0 5px;
                     }                   
                 }
                 
