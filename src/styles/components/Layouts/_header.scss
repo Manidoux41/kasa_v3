@@ -11,14 +11,13 @@ header {
     }
     .logo {
         padding: 0;
-        img{
+        img {
             @media screen and (max-width:768px) {        
                 max-width: 145px;
                 max-height: 47px;
             }   
         }             
-    }
-    
+    }    
     nav {
         ul {
             list-style: none;           
@@ -31,14 +30,13 @@ header {
                     font-size: 24px;
                     font-weight: 500;
                     color: $mainColor;
-                    padding: 0 12px;
+                    padding: 0 0 0 33px;;
                     @media screen and (max-width:768px) {
                         font-size: 12px;
                         text-transform: uppercase;
-                        padding: 0 5px;
+                        padding: 0 0 0 12px;
                     }                   
-                }
-                
+                }                
             }
         }
     }
