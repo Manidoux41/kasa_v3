@@ -10,7 +10,7 @@
         &:hover {
             color: $mainColor;
         }
-        @media screen and (max-width:768px) {
+        @media screen and (max-width:960px) {
             height: 20px;
             width: auto;
          }  
@@ -28,7 +28,7 @@
         transform: translateX(-50%);
         font-size: 18px;
         color: #fff;
-        @media screen and (max-width:768px) {
+        @media screen and (max-width:960px) {
             visibility: hidden;
         }
     }

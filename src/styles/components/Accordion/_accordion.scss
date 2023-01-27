@@ -3,7 +3,7 @@
 .accordion {
     width: 100%;
     margin: 12px auto;
-    @media screen and (max-width:768px) {
+    @media screen and (max-width:960px) {
         margin: 9px auto;
     }   
     &__header {
@@ -18,7 +18,7 @@
         h3{
             font-weight: 500;
         }
-        @media screen and (max-width:768px) {
+        @media screen and (max-width:960px) {
             font-size: 13px;
             padding: 5px 12px;
         }       
@@ -26,7 +26,7 @@
             width: 23px;
             height: 14px;
             font-weight: 500;
-            @media screen and (max-width:768px) {
+            @media screen and (max-width:960px) {
                 width: 15px;
             height: 8px;
             }  
@@ -53,7 +53,7 @@
         align-items: flex-start;
         visibility: visible;
         height: 80%;  
-        @media screen and (max-width:768px) {
+        @media screen and (max-width:960px) {
             line-height: 17px;
             font-size: 12px;
             padding: 17px 12px ;
