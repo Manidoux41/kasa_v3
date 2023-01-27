@@ -15,7 +15,7 @@ const About = () => {
     <div className='wrapper about'>
       <Banner imgSource={`./image${index}.jpg`}/>       
       <div className="about__container">
-        {aboutData.map((data, index) => {
+        {aboutData.map((data,index) => {
           return <Accordion key={index} title={data.title} content={data.content} />;
         })}
       </div> 

@@ -10,7 +10,7 @@ const Accordion = ({ id, title, content }) => {
 
   return (
     <>
-      <div className="accordion">
+      <div key={id} className="accordion">
         <div className="accordion__header">
           <h3>{title}</h3>
           <img
