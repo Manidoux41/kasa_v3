@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import Accordion from "../../components/Accordion/Accordion";
 import Rating from "../../components/Rating/Rating";
@@ -9,6 +8,7 @@ const Logements = ({ children }) => {
   const { logementId } = useParams();
   const appart = data.find((appart) => appart.id === logementId);
   const {
+    id,
     title,
     location,
     pictures,
@@ -25,7 +25,7 @@ const Logements = ({ children }) => {
     margin: "0 auto",
   };
 
-  const accordionInfo = [{ name: "Description" }, { name: "Equipments" }];
+  // const accordionInfo = [{ name: "Description" }, { name: "Equipments" }];
 
   return (
     <div className="wrapper logements">
@@ -39,6 +39,7 @@ const Logements = ({ children }) => {
           <ul className="tag">
             {tags.map((tag, index) => (
               <li key={index}>{tag}</li>
+              // <li>{tag}</li>
             ))}
           </ul>
         </div>
@@ -55,10 +56,11 @@ const Logements = ({ children }) => {
         </div>
       </div>
       <div className="description">
-              <Accordion title="Description" content={description} />
-              <Accordion title="Equipements" content={equipments.map((equi)=> {
+
+              <Accordion key={id} title="Description" content={description} />
+              <Accordion title="Equipements" content={equipments.map((equi, index)=> {
                 return(
-                  <li>{equi}</li>
+                  <li key={index}>{equi}</li>
                 )
               })} />
       </div> 

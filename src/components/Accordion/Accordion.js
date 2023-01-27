@@ -1,7 +1,7 @@
 import chevronUp from "../../assets/svg/chevron-up.svg";
 import React, { useState } from "react";
 
-const Accordion = ({ title, content }) => {
+const Accordion = ({ id, title, content }) => {
   const [isActive, setIsActive] = useState(false);
 
   const displayContent = () => {
