@@ -26,7 +26,7 @@ const Accordion = ({ id, title, content }) => {
           </div>
         ) : (
           <div className="accordion__content">
-            {content}
+            <p>{content}</p>
           </div>
         )}
       </div>
