@@ -1,8 +1,8 @@
-import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import {Layout, Home, About, Logements, NotFound} from '../../pages/Public'
 
 const PublicRouter = () => {
+ 
   return (
     <Routes>
           <Route element={<Layout />}>
@@ -12,7 +12,7 @@ const PublicRouter = () => {
             <Route path="/about" element={<About />} />
             <Route path="/logements/:logementId" element={<Logements />} />
             
-            <Route path="*" element={<NotFound />} />
+            <Route path="/*" element={<NotFound />} />
           </Route>
     </Routes>
   )

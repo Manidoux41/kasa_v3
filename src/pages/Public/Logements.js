@@ -1,12 +1,14 @@
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import Accordion from "../../components/Accordion/Accordion";
 import Rating from "../../components/Rating/Rating";
 import SlideShow from "../../components/SlideShow/SlideShow";
 import data from "../../datas/appartement.json";
+import NotFound from "./NotFound";
 
 const Logements = ({ children }) => {
   const { logementId } = useParams();
   const appart = data.find((appart) => appart.id === logementId);
+
   const {
     id,
     title,
@@ -17,7 +19,8 @@ const Logements = ({ children }) => {
     rating,
     equipments,
     description,
-  } = appart;
+  } = appart || {};
+
 
   const containerStyles = {
     with: "100%",
@@ -25,9 +28,7 @@ const Logements = ({ children }) => {
     margin: "0 auto",
   };
 
-  // const accordionInfo = [{ name: "Description" }, { name: "Equipments" }];
-
-  return (
+  return appart ? (
     <div className="wrapper logements">
       <div style={containerStyles}>
         <SlideShow pictures={pictures} />
@@ -56,16 +57,18 @@ const Logements = ({ children }) => {
         </div>
       </div>
       <div className="description">
-
-              <Accordion key={id} title="Description" content={description} />
-              <Accordion title="Equipements" content={equipments.map((equi, index)=> {
-                return(
-                  <li key={index}>{equi}</li>
-                )
-              })} />
-      </div> 
+        <Accordion key={id} title="Description" content={description} />
+        <Accordion
+          title="Equipements"
+          content={equipments.map((equi, index) => {
+            return <li key={index}>{equi}</li>;
+          })}
+        />
+      </div>
     </div>
-  );
+  ) : (
+    <Navigate to="/error" replace={<NotFound />} />
+  )
 };
 
 export default Logements;
