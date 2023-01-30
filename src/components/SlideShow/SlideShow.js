@@ -1,9 +1,10 @@
-import React, { useState } from "react";
 import SlideLeft from "../../assets/svg/slide-left.svg";
 import SlideRight from "../../assets/svg/slide-right.svg";
+import React, { useState, useEffect } from "react";
 
-const SlideShow = ({ pictures }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const Slideshow = ({ pictures }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   const slideStyle = {
     width: "100%",
@@ -11,37 +12,67 @@ const SlideShow = ({ pictures }) => {
     borderRadius: "10px",
     backgroundPosition: "center",
     backgroundSize: "cover",
-    backgroundImage: `url(${pictures[currentIndex]})`,
+    backgroundImage: `url(${pictures[currentImageIndex]})`,
     position: "relative",
   };
 
-  const goToPrevious = () => {
-    const isFirstPicture = currentIndex === 0;
-    const newIndex = isFirstPicture ? pictures.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentImageIndex((currentImageIndex + 1) % pictures.length);
+    }, 3000);
+    return () => clearInterval(intervalId);
+  }, [currentImageIndex, pictures]);
+
+  const handleImageLoad = () => {
+    setLoading(false);
   };
 
-  const goToNext = () => {
-    const isLastPicture = currentIndex === pictures.length - 1;
-    const newIndex = isLastPicture ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
+  const handlePrevClick = () => {
+    setCurrentImageIndex(
+      (currentImageIndex + pictures.length - 1) % pictures.length
+    );
+    setLoading(true);
+  };
+
+  const handleNextClick = () => {
+    setCurrentImageIndex((currentImageIndex + 1) % pictures.length);
+    setLoading(true);
   };
 
   return (
-    <div style={slideStyle} key={currentIndex}>
-      <div className="slide__left">
-        <img src={SlideLeft} alt="slide left" onClick={goToPrevious} />
+    <>
+      {loading && <p>Chargement en cours...</p>}
+      <div
+        style={slideStyle}
+        key={currentImageIndex}
+        onLoad={handleImageLoad}
+        onError={handleImageLoad}
+      >
+        <div className="slide__left">
+          <img
+            src={SlideLeft}
+            alt="slide left"
+            onClick={handlePrevClick}
+            onLoad={handleImageLoad}
+          />
+        </div>
+
+        <div className="slide__right">
+          <img
+            src={SlideRight}
+            alt="slide right"
+            onClick={handleNextClick}
+            onLoad={handleImageLoad}
+          />
+        </div>
+        <div className="position">
+          <p>
+            {currentImageIndex + 1}/{pictures.length}
+          </p>
+        </div>
       </div>
-      <div className="slide__right">
-        <img src={SlideRight} alt="slide right" onClick={goToNext} />
-      </div>
-      <div className="position">
-        <p>
-          {currentIndex + 1}/{pictures.length}
-        </p>
-      </div>
-    </div>
+    </>
   );
 };
 
-export default SlideShow;
+export default Slideshow;
