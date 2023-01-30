@@ -81,8 +81,9 @@
                     text-align: right;
                     @media screen and (max-width:960px) {
                         height: 33px;
-                        width: 93px;
+                        width: 53px;
                         line-height: 17px;
+                        
                     }
                 }
                 .avatarProprio{
@@ -107,8 +108,7 @@
                     height: 15px;
                 }
             }
-        }
-        
+        }     
     }
     .description {
         width: 100%;
