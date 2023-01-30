@@ -6,6 +6,7 @@ import data from "../../datas/appartement.json";
 import NotFound from "./NotFound";
 
 const Logements = ({ children }) => {
+  
   const { logementId } = useParams();
   const appart = data.find((appart) => appart.id === logementId);
 
@@ -40,7 +41,6 @@ const Logements = ({ children }) => {
           <ul className="tag">
             {tags.map((tag, index) => (
               <li key={index}>{tag}</li>
-              // <li>{tag}</li>
             ))}
           </ul>
         </div>

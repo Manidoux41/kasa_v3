@@ -28,21 +28,19 @@ const SlideShow = ({ pictures }) => {
   };
 
   return (
-    
-      <div style={slideStyle} key={currentIndex} >
-        <div className="slide__left">
-          <img src={SlideLeft} alt="slide left" onClick={goToPrevious} />
-        </div>
-        <div className="slide__right">
-          <img src={SlideRight} alt="slide right" onClick={goToNext} />
-        </div>
-        <div className="position">
-          <p>
-            {currentIndex + 1}/{pictures.length}
-          </p>
-        </div>
+    <div style={slideStyle} key={currentIndex}>
+      <div className="slide__left">
+        <img src={SlideLeft} alt="slide left" onClick={goToPrevious} />
       </div>
-    
+      <div className="slide__right">
+        <img src={SlideRight} alt="slide right" onClick={goToNext} />
+      </div>
+      <div className="position">
+        <p>
+          {currentIndex + 1}/{pictures.length}
+        </p>
+      </div>
+    </div>
   );
 };
 
