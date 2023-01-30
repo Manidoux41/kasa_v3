@@ -37,6 +37,7 @@ const Slideshow = ({ pictures }) => {
   const handleNextClick = () => {
     setCurrentImageIndex((currentImageIndex + 1) % pictures.length);
     setLoading(true);
+
   };
 
   return (
@@ -44,6 +45,7 @@ const Slideshow = ({ pictures }) => {
       {loading && <p>Chargement en cours...</p>}
       <div
         style={slideStyle}
+        className="image-container"
         key={currentImageIndex}
         onLoad={handleImageLoad}
         onError={handleImageLoad}
