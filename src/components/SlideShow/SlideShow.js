@@ -19,7 +19,7 @@ const Slideshow = ({ pictures }) => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentImageIndex((currentImageIndex + 1) % pictures.length);
-    }, 3000);
+    }, 5000);
     return () => clearInterval(intervalId);
   }, [currentImageIndex, pictures]);
 
