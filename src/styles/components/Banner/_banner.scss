@@ -1,13 +1,21 @@
 @use '../../abstracts/' as *;
 
 .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 223px;
+    height:223px;
     width: 100%;
     border-radius: 25px;
     overflow: hidden;
     position: relative;
     @media screen  and (max-width:960px){
         width: 89%;
-        margin: 0 auto;        
+        max-height: 111px;
+        height:111px;
+        margin: 0 auto;
+        justify-content: flex-start;        
     }
     h1 {
         width: 100%;
@@ -21,7 +29,13 @@
         transform: translate(-50%, -50%);
         z-index: 1;        
         @media screen and (max-width: 960px) {
+            text-align: left;
+            justify-self: flex-start;
+            left: 35%;
+            height: 48px;
+            width: 217px;
             font-size: 24px;
+            
         }
      }
      .overlay {
