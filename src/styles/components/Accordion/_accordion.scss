@@ -51,15 +51,18 @@
         justify-content: left;
         align-items: flex-start;
         visibility: visible;
-        height: 80%;  
+        height: 80%;
+        padding: 20px 27px 30px 27px;
+        top: -35px;
+        z-index: -1;
         @media screen and (max-width:960px) {
             line-height: 17px;
             font-size: 12px;            
         } 
         p{
-            padding: 36px 18px 80px;
+            margin: 17px 0px;
             @media screen and (max-width:960px) {
-                padding: 17px 12px;
+                margin: 17px 0px;
             }
         }      
     }
