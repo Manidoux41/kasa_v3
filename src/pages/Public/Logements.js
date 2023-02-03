@@ -23,7 +23,7 @@ const appart = data.find((appart) => appart.id === logementId);
   } = appart || {};
 
 
-  const containerStyles = {
+  const slideContainer = {
     with: "100%",
     height: "415px",
     margin: "0 auto",
@@ -31,7 +31,7 @@ const appart = data.find((appart) => appart.id === logementId);
 
   return appart ? (
     <div className="wrapper logements">
-      <div style={containerStyles}>
+      <div style={slideContainer} className="slideContainer">
         <SlideShow pictures={pictures} />
       </div>
       <div className="logementHeader">
