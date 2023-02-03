@@ -25,22 +25,30 @@ import { useState, useEffect } from 'react';
 const Cards = () => {  
 
   const [apparts, setApparts] = useState([])
+  const [isLoading, setIsLoading] = useState(true);
+
   
-  useEffect(() => {
-    try {
+  useEffect(() => {    
       fetch('/data/appartement.json')
       .then(response => response.json())
-      .then(jsonData => setApparts(jsonData))
-    } catch(error) {
+      .then(jsonData => {
+        setApparts(jsonData)
+      })
+      .catch(error => {
       console.error(error)
-    }
-  }, [apparts])
+      setIsLoading(false);
+    })
+  }, [])
   
-    return (
+    return isLoading ? (
       <div className='cards'>
           {apparts.map((appart) => (
           <Card key={appart.id} appart={appart} />
         ))}
+      </div>
+    ) : (
+      <div className='cards'>
+        <p>Chargement des données en cours ...</p>
       </div>
     )
   }
