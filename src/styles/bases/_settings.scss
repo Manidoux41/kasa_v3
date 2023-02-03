@@ -9,6 +9,10 @@
 }
 .Layout{
     height: 100vh;
+    margin-top: 40px;
+    @media screen and (max-width:960px) {
+        margin-top: 20px;
+    }
 }
 .wrapper{
     max-width: 1240px;
