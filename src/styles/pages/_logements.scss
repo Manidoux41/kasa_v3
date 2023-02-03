@@ -57,6 +57,7 @@
         .proprioInfo{
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             gap: 24px;
             align-items: flex-end;
            margin: 16auto;
