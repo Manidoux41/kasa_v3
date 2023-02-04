@@ -24,23 +24,22 @@ import { useState, useEffect } from 'react';
 
 const Cards = () => {  
 
-  const [apparts, setApparts] = useState([])
+  const [apparts, setApparts] = useState(null)
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
   
   useEffect(() => {   
-    const fetchData = () => {
-      fetch('/data/appartement.json')
-        .then(response => response.json())
-        .then(jsonData => {
-          setApparts(jsonData);
-          setIsLoading(false);
-        })
-        .catch(error => {
-          setError(error);
-          setIsLoading(false);
-        });
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/data/appartement.json');
+        const jsonData = await response.json();
+        setApparts(jsonData);
+        setIsLoading(false);
+      } catch (error) {
+        setError(error);
+        setIsLoading(false);
+      }
     };
 
     setTimeout(fetchData, 0);
@@ -51,6 +50,7 @@ const Cards = () => {
   if (error) {
     return <p>An error occurred: {error.message}</p>;
   }
+
   
     return !isLoading ? (
       <div className='cards'>
