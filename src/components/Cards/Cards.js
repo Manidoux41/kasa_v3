@@ -30,15 +30,14 @@ const Cards = () => {
       try {
         const response = await fetch("/data/appartement.json");
         const jsonData = await response.json();
-        setApparts(jsonData);
-        setIsLoading(false);
+         setApparts(jsonData);
+         setIsLoading(false);
       } catch (error) {
         setError(error);
         setIsLoading(false);
       }
     };
-    setTimeout(fetchData, 3500);
-
+    setTimeout(fetchData, 0);
     return () => {};
   }, []);
 
