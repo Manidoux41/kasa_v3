@@ -42,7 +42,7 @@ const Slideshow = ({ pictures }) => {
 
   return (
     <>
-      {loading && <p>Chargement en cours...</p>}
+      {loading && <p></p>}
       <div
         style={slideStyle}
         className="image-container"

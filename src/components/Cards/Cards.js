@@ -37,7 +37,7 @@ const Cards = () => {
         setIsLoading(false);
       }
     };
-    setTimeout(fetchData, 3000);
+    setTimeout(fetchData, 3500);
 
     return () => {};
   }, []);
