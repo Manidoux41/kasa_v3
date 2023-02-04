@@ -45,7 +45,7 @@ const Cards = () => {
     setTimeout(fetchData, 0);
 
     return () => {};
-  }, []);
+  }, [apparts]);
 
   if (error) {
     return <p>An error occurred: {error.message}</p>;
