@@ -19,8 +19,14 @@ footer {
         right: 0;      
     }
     .logo {
+        width: 122px;
+        height: 40px;
         margin-top: 66px;
         color : #fff;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
     }
     .copyright{
         font-size: 24px;
