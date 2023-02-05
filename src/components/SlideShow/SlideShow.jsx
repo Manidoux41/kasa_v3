@@ -10,10 +10,10 @@ const Slideshow = ({ pictures }) => {
     width: "100%",
     height: "100%",
     borderRadius: "10px",
-    backgroundPosition: "center",
+    backgroundPosition: "100% 0",
     backgroundSize: "cover",
     backgroundImage: `url(${pictures[currentImageIndex]})`,
-    position: "relative",
+    position: "absolute",
   };
 
   useEffect(() => {
@@ -37,40 +37,41 @@ const Slideshow = ({ pictures }) => {
   const handleNextClick = () => {
     setCurrentImageIndex((currentImageIndex + 1) % pictures.length);
     setLoading(true);
-
   };
 
   return (
     <>
       {loading && <p></p>}
-      <div
-        style={slideStyle}
-        className="image-container"
-        key={currentImageIndex}
-        onLoad={handleImageLoad}
-        onError={handleImageLoad}
-      >
-        <div className="slide__left">
-          <img
-            src={SlideLeft}
-            alt="slide left"
-            onClick={handlePrevClick}
-            onLoad={handleImageLoad}
-          />
-        </div>
+      <div className="slide-container">
+        <div
+          style={slideStyle}
+          className="image-container"
+          key={currentImageIndex}
+          onLoad={handleImageLoad}
+          onError={handleImageLoad}
+        >
+          <div className="slide__left">
+            <img
+              src={SlideLeft}
+              alt="slide left"
+              onClick={handlePrevClick}
+              onLoad={handleImageLoad}
+            />
+          </div>
 
-        <div className="slide__right">
-          <img
-            src={SlideRight}
-            alt="slide right"
-            onClick={handleNextClick}
-            onLoad={handleImageLoad}
-          />
-        </div>
-        <div className="position">
-          <p>
-            {currentImageIndex + 1}/{pictures.length}
-          </p>
+          <div className="slide__right">
+            <img
+              src={SlideRight}
+              alt="slide right"
+              onClick={handleNextClick}
+              onLoad={handleImageLoad}
+            />
+          </div>
+          <div className="position">
+            <p>
+              {currentImageIndex + 1}/{pictures.length}
+            </p>
+          </div>
         </div>
       </div>
     </>
