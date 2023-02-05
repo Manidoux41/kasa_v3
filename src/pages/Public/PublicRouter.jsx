@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
-import {Layout, Home, About, Logements, NotFound} from '../../pages/Public'
+import {Layout, Home, About, Logements, NotFound} from '.'
 
 const PublicRouter = () => {
  
