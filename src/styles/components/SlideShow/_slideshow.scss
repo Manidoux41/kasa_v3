@@ -35,7 +35,7 @@
     }
 
     .image-container {
-        animation: fadeIn 1s ease-in-out;
+        // animation: fadeIn 1s ease-in-out;
         position: absolute;
         width: 100%;
       }
@@ -45,7 +45,7 @@
           opacity: 0;
         }
         75%{
-          opacity:0.5;
+          opacity:0.75;
           }
         100% {
           opacity: 1;
