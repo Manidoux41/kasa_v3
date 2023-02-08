@@ -1,10 +1,16 @@
 .about {
-
   margin-top: 49px;
   margin-bottom: 46px;
   @media screen and (max-width:960px) {
     margin-top: 20px;
-}
+  }
+  .banner {
+    @media screen  and (max-width:960px){
+      width: 89%;
+      max-height: 223px;
+      height:223px;      
+    }
+  }
   &__container{
     width: 89%;
     margin: 0 auto;
