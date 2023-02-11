@@ -31,7 +31,7 @@ const appart = data.find((appart) => appart.id === logementId);
 
   return appart ? (
     <div className="wrapper logements">
-      <div style={slideContainer} className="slideContainer">
+      <div style={slideContainer}>
         <SlideShow pictures={pictures} />
       </div>
       <div className="logementHeader">
