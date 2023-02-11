@@ -5,9 +5,11 @@ import Cards from "../../components/Cards/Cards";
 const Home = () => {
   const index = 1;
   const [title, setTitle] = useState('')
+
   useEffect(() => {
     setTitle('Chez vous, partout et ailleurs')
   },[])
+  
   return (
     <div className="wrapper home">
       <Banner imgSource={`./image${index}.jpg`} title={title}/>
