@@ -5,7 +5,7 @@ import SlideShow from "../../components/SlideShow/SlideShow";
 import data from "../../datas/appartement.json";
 import NotFound from "./NotFound";
 
-const Logements = ({ children }) => {
+const Logements = () => {
 
 const { logementId } = useParams();
 const appart = data.find((appart) => appart.id === logementId);  
